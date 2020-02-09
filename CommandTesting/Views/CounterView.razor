@@ -1,0 +1,8 @@
+﻿@page "/counter"
+@inherits ReactiveComponentBase<CounterViewModel>
+
+<Heading Size="HeadingSize.Is1">Counter</Heading>
+
+<Paragraph>Current count: @ViewModel.CurrentCount</Paragraph>
+
+<Button Color="Color.Primary" Command="@ViewModel.Increment">Click me</Button>

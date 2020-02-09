@@ -1,0 +1,18 @@
+﻿@inherits ReactiveComponentBase<GreetingViewModel>
+<Container Fluid="true">
+    <Heading Size="HeadingSize.Is1">ReactiveUI + Razor = 💖</Heading>
+    <Row>
+        <Column ColumnSize="ColumnSize.Is6.OnDesktop">
+            <Field>
+                <FieldLabel>@ViewModel.Greeting</FieldLabel>
+                <TextEdit @bind-Text="ViewModel.Name" Placeholder="Enter name" />
+                <small id="emailHelp"
+                       class="form-text text-muted">
+                    Please enter your name.
+                </small>
+                <Button Color="Color.Primary" Command="@ViewModel.Clear" Disabled="@(!ViewModel.CanClear)">Clear</Button>
+            </Field>
+        </Column>
+    </Row>
+</Container>
+           
